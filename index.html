@@ -12,8 +12,10 @@
 	<img style="width:100%;" src="https://anyou.oss-cn-beijing.aliyuncs.com/topic/k27.jpg" alt="">
 	<script>
 		window.onload = function (e) {
-			console.log(123)
-			window.location = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb37d6589c409dddc&redirect_uri=http://api.mpad365.com/follow_mp/?mp=1&response_type=code&scope=snsapi_userinfo&state=1&connect_redirect=1#wechat_redirect';
+			url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb37d6589c409dddc&redirect_uri=http://api.mpad365.com/follow_mp/?mp=1&response_type=code&scope=snsapi_userinfo&state=1&connect_redirect=1#wechat_redirect';
+			if (window.location.href != url) {
+				window.location = url;
+			}
 		}
 	</script>
 </body>
